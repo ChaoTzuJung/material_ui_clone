@@ -1,0 +1,108 @@
+.appbar {
+  color: #3b3b3b;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.appbar-horizontal {
+  height: 80px;
+
+  .asus-logo {
+    justify-content: flex-start;
+    align-items: center;
+
+    &--icon {
+      display: flex;
+      align-items: center;
+      padding-right: 8px;
+      font-size: 95px;
+    }
+
+    &--title {
+      font-size: 22px;
+    }
+  }
+
+  .appbar {
+    &__left {
+      flex-grow: 1;
+    }
+
+    &__right {
+      align-items: center;
+      font-size: 30px;
+    }
+
+    &__app-groups {
+      align-items: center;
+    }
+
+    &__noti {
+      margin: 0 16px;
+    }
+
+    &__user {
+      margin: 0 16px;
+    }
+  }
+
+  .chips-button--text {
+    padding: 0;
+    font-size: 35px;
+    color: #bdbdbd;
+
+    span {
+      vertical-align: middle;
+    }
+  }
+}
+
+.appbar-vertical {
+  padding: 0;
+  height: 100vh;
+  background-color: #0089ff;
+
+  .asus-logo {
+    width: 100%;
+    color: #f8f8f8;
+    border-bottom: 0.5px solid #f8f8f8;
+
+    &--icon {
+      font-size: 40px;
+    }
+  }
+
+  .appbar {
+    &__top {
+      flex-grow: 1;
+    }
+
+    &__bottom {
+      align-items: center;
+      font-size: 30px;
+    }
+
+    &__app-groups {
+      align-items: center;
+    }
+
+    &__noti {
+      margin: 16px 0;
+    }
+
+    &__user {
+      margin: 16px 0;
+    }
+
+    &-button-wrapper {
+      margin: 8px;
+    }
+  }
+
+  .chips-button--text {
+    padding: 0;
+    min-width: 36px;
+    font-size: 20px;
+    color: #f8f8f8;
+  }
+}

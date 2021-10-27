@@ -1,0 +1,41 @@
+.positioned-tooltips {
+  position: relative;
+  margin-bottom: 48px;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+
+  & > .top {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  & > .right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+  }
+
+  & > .bottom {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transform: translateX(50%);
+  }
+
+  & > .left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+  }
+}
+
+.arrow-tooltips {
+  margin-bottom: 48px;
+}

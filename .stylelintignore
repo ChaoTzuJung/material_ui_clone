@@ -1,0 +1,8 @@
+# react-scaffold folder
+node_modules
+cjs
+esm
+umd
+types
+package-lock.json
+dist

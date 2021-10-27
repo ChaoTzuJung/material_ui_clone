@@ -1,0 +1,43 @@
+@import "../../assets/styles/variables";
+
+.chips-drawer {
+  position: fixed;
+  z-index: 200;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  background-color: $white;
+  opacity: 0;
+  box-shadow: 1px 0 7px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-out;
+  transform: translateX(100%);
+
+  &--left {
+    @extend .chips-drawer;
+
+    top: 0;
+  }
+
+  &--right {
+    @extend .chips-drawer;
+
+    top: 0;
+  }
+
+  &--top {
+    @extend .chips-drawer;
+
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+  }
+
+  &--bottom {
+    @extend .chips-drawer;
+
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+  }
+}

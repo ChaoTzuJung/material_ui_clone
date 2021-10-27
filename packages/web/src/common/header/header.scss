@@ -1,0 +1,42 @@
+.header {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 80px;
+  color: #3b3b3b;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d2d4d5;
+  flex-grow: 1;
+
+  &__left {
+    flex-grow: 1;
+  }
+
+  &__right {
+    align-items: center;
+    font-size: 30px;
+  }
+
+  &__app-groups {
+    align-items: center;
+  }
+
+  &__noti {
+    margin: 0 16px;
+  }
+
+  &__user {
+    margin: 0 16px;
+  }
+
+  &__logo-container {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__logo {
+    border: 0;
+    cursor: pointer;
+  }
+}

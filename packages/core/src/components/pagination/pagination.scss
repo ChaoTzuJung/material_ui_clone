@@ -1,0 +1,81 @@
+@import "../../assets/styles/variables";
+
+.chips-pagination {
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  &__ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__li {
+    list-style: none;
+  }
+
+  &__btn {
+    padding: 0 6px;
+    margin: 0 3px;
+    min-width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: none;
+    box-sizing: border-box;
+
+    &--selected {
+      color: $white;
+      background-color: #c7c7c7;
+
+      &--primary {
+        background-color: $blue;
+
+        &:hover {
+          background-color: rgb(17, 82, 147);
+        }
+      }
+
+      &--secondary {
+        background-color: $secondary;
+
+        &:hover {
+          background-color: rgb(154, 0, 54);
+        }
+      }
+    }
+
+    &--disabled {
+      color: rgba(0, 0, 0, 0.26);
+      opacity: 1;
+      cursor: default;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.26);
+        background-color: inherit;
+        box-shadow: none;
+      }
+
+      &.chips-pagination__btn--selected {
+        color: $white;
+        background-color: #c7c7c7;
+
+        &:hover {
+          color: $white;
+          background-color: #c7c7c7;
+        }
+      }
+    }
+
+    &--zip {
+      cursor: initial;
+      text-align: center;
+
+      &:hover {
+        color: $default;
+        background-color: inherit;
+        box-shadow: none;
+      }
+    }
+  }
+}

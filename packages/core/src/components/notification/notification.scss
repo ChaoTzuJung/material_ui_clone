@@ -1,0 +1,84 @@
+@import "../../assets/styles/variables";
+
+.chips-notification {
+  position: fixed;
+  z-index: 300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 300px;
+  font-family: $roboto;
+  color: $white;
+  background-color: $default;
+  border-radius: 5px;
+  transition: opacity 0.5s ease;
+
+  &-enter {
+    opacity: 0;
+  }
+
+  &-enter-active {
+    opacity: 1;
+  }
+
+  &-exit {
+    opacity: 1;
+  }
+
+  &-exit-active {
+    opacity: 0;
+  }
+
+  &__close-icon {
+    cursor: pointer;
+  }
+
+  &--topright {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  &--topcenter {
+    top: 1.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &--topleft {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  &--bottomright {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+
+  &--bottomcenter {
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &--bottomleft {
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  &--primary {
+    background-color: $primary;
+  }
+
+  &--secondary {
+    background-color: $secondary;
+  }
+
+  &--success {
+    background-color: $success;
+  }
+
+  &--warning {
+    background-color: $warning;
+  }
+}

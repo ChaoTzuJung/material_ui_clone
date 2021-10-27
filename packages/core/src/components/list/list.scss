@@ -1,0 +1,26 @@
+.chips-list {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  // TODO: 好像可以搬出去變共用
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__item {
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+
+    &--hover {
+      cursor: pointer;
+
+      &:hover {
+        color: #1069fa;
+        background-color: #f5f6fa;
+      }
+    }
+  }
+}

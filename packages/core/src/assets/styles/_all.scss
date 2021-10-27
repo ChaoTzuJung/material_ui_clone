@@ -1,0 +1,10 @@
+.d-flex {
+  display: flex;
+
+  &--center {
+    @extend .d-flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+}

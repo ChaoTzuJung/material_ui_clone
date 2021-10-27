@@ -1,0 +1,149 @@
+@import "../../assets/styles/variables";
+
+.chips-radio {
+  position: relative;
+  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0;
+
+  &--check {
+    position: relative;
+    z-index: 5;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 2.5px solid rgba(0, 0, 0, 0.54);
+    border-radius: 50px;
+    transition: border 0.25s linear;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      transition: background 0.25s linear;
+      content: "";
+    }
+  }
+
+  &__input {
+    position: absolute;
+    z-index: 10;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .chips-radio--check {
+      border-color: $default;
+
+      &::before {
+        background: $default;
+      }
+    }
+  }
+
+  &:hover .chips-radio--check {
+    border-color: $default;
+  }
+
+  &--primary {
+    &:hover .chips-radio--check {
+      border-color: $primary;
+    }
+
+    .chips-radio__input {
+      &:checked ~ .chips-radio--check {
+        border-color: $primary;
+
+        &::before {
+          background: $primary;
+        }
+      }
+    }
+  }
+
+  &--secondary {
+    &:hover .chips-radio--check {
+      border-color: $secondary;
+    }
+
+    .chips-radio__input {
+      &:checked ~ .chips-radio--check {
+        border-color: $secondary;
+
+        &::before {
+          background: $secondary;
+        }
+      }
+    }
+  }
+
+  &--success {
+    &:hover .chips-radio--check {
+      border-color: $success;
+    }
+
+    .chips-radio__input {
+      &:checked ~ .chips-radio--check {
+        border-color: $success;
+
+        &::before {
+          background: $success;
+        }
+      }
+    }
+  }
+
+  &--warning {
+    &:hover .chips-radio--check {
+      border-color: $warning;
+    }
+
+    .chips-radio__input {
+      &:checked ~ .chips-radio--check {
+        border-color: $warning;
+
+        &::before {
+          background: $warning;
+        }
+      }
+    }
+  }
+
+  &--disabled {
+    color: $disabled;
+
+    .chips-radio__input {
+      &:checked ~ .chips-radio--check {
+        border-color: $disabled;
+
+        &::before {
+          background: $disabled;
+        }
+      }
+    }
+
+    .chips-radio--check {
+      border-color: $disabled;
+    }
+
+    &:hover .chips-radio--check {
+      border-color: $disabled;
+    }
+  }
+}
+
+.chips-label {
+  z-index: 9;
+  display: block;
+  padding-left: 10px;
+  transition: all 0.25s linear;
+  cursor: pointer;
+}

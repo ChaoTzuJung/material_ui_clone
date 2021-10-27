@@ -1,0 +1,44 @@
+.card-demo {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 0 auto;
+  width: 300px;
+  border: 1px solid #e8e8e8;
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    color: #9b9b9b;
+  }
+
+  &__card {
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      .card-demo__check {
+        opacity: 1;
+      }
+    }
+
+    &--active {
+      @extend .card-demo__card;
+
+      .card-demo__check {
+        color: #fff;
+        background-color: #9b9b9b;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__check {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: #9b9b9b;
+    border-radius: 50%;
+    opacity: 0;
+  }
+}

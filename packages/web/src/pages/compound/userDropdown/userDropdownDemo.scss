@@ -1,0 +1,119 @@
+.userDropdownDemo {
+  display: flex;
+  gap: 18px;
+
+  .userDropdown {
+    padding: 24px 0;
+    width: 300px;
+    height: 275px;
+    background-color: #fff;
+
+    /* should be modified in Card component? */
+    border-radius: 10px;
+    box-shadow: 0 15px 50px 0 rgba(10, 62, 151, 0.35);
+    box-sizing: border-box;
+    flex-direction: column;
+
+    &__top {
+      padding: 0 24px;
+      margin-bottom: 24px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    &__down {
+      margin-top: 16px;
+      width: 100%;
+    }
+
+    .userInfo {
+      display: flex;
+      height: 72px;
+      font-size: 18px;
+      color: #515564;
+      gap: 15px;
+
+      &-description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 6px;
+
+        &__name {
+          font-size: 18px;
+        }
+
+        &__role-hint {
+          font-size: 12px;
+          color: #7d849b;
+        }
+
+        &__role-hint-site {
+          font-weight: 500;
+        }
+
+        &__role-name {
+          font-size: 16px;
+        }
+      }
+
+      .chips-avatar {
+        width: 72px;
+        height: 72px;
+        font-size: 26px;
+      }
+    }
+
+    .divider {
+      margin: 0;
+      width: calc(100% - 48px);
+      border-bottom-width: 0;
+      border-top: 1px solid #e5e7f2;
+    }
+
+    .userMenu {
+      color: #23252c;
+
+      &-apperance {
+        display: flex;
+        justify-content: space-between;
+
+        &__switch {
+          display: flex;
+        }
+      }
+
+      &__list {
+        padding: 0;
+        width: 100%;
+
+        & > div {
+          padding: 11px 0;
+          height: 16px;
+          font-size: 14px;
+          text-align: left;
+
+          & .chips-list__item--text {
+            margin-left: 24px;
+          }
+
+          .userMenu-apperance__switch {
+            margin-right: 24px;
+          }
+        }
+      }
+
+      .chips-switch {
+        height: 20px;
+
+        /* should be modified in Avatar component? */
+        &--active {
+          .chips-switch__track {
+            background-color: #1069fa;
+          }
+        }
+      }
+    }
+  }
+}

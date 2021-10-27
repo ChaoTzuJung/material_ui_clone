@@ -1,0 +1,244 @@
+@import "../../assets/styles/variables";
+
+.chips-tooltip {
+  position: relative;
+  display: inline-flex;
+
+  &__container {
+    position: absolute;
+    display: none;
+
+    /* placement */
+    &--top-start {
+      bottom: 100%;
+      left: 0;
+      padding-bottom: 10px;
+      border-bottom-left-radius: 0;
+    }
+
+    &--top {
+      bottom: 100%;
+      padding-bottom: 10px;
+    }
+
+    &--top-end {
+      right: 0;
+      bottom: 100%;
+      padding-bottom: 10px;
+      border-bottom-right-radius: 0;
+    }
+
+    &--right-start {
+      top: 0;
+      left: 100%;
+      padding-left: 10px;
+      border-top-left-radius: 0;
+    }
+
+    &--right {
+      left: 100%;
+      padding-left: 10px;
+    }
+
+    &--right-end {
+      bottom: 0;
+      left: 100%;
+      padding-left: 10px;
+      border-bottom-left-radius: 0;
+    }
+
+    &--bottom-start {
+      top: 100%;
+      left: 0;
+      padding-top: 10px;
+      border-top-left-radius: 0;
+    }
+
+    &--bottom {
+      top: 100%;
+      padding-top: 10px;
+    }
+
+    &--bottom-end {
+      top: 100%;
+      right: 0;
+      padding-top: 10px;
+      border-top-right-radius: 0;
+    }
+
+    &--left-start {
+      top: 0;
+      right: 100%;
+      padding-right: 10px;
+      border-top-right-radius: 0;
+    }
+
+    &--left {
+      right: 100%;
+      padding-right: 10px;
+    }
+
+    &--left-end {
+      right: 100%;
+      bottom: 0;
+      padding-right: 10px;
+      border-bottom-right-radius: 0;
+    }
+
+    &--visible {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 5px;
+    width: max-content;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+
+    // TODO:
+
+    /*
+      &--elevated {
+        @extend .chips-tooltip__content;
+
+        box-shadow:
+          rgb(0 0 0 / 20%) 0 3px 1px -2px,
+          rgb(0 0 0 / 14%) 0 2px 2px 0,
+          rgb(0 0 0 / 12%) 0 1px 5px 0;
+      }
+
+      &--round {
+        @extend .chips-tooltip__content;
+
+        border-radius: 4px;
+      }
+
+      &--square {
+        @extend .chips-tooltip__content;
+
+        border-radius: 0;
+      }
+    */
+
+    /* color */
+    &--primary {
+      background: $primary;
+    }
+
+    &--secondary {
+      background: $secondary;
+    }
+
+    &--success {
+      background: $success;
+    }
+
+    &--warning {
+      background: $warning;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.7) transparent;
+    transform: translateX(-50%);
+
+    /* color */
+    &--primary {
+      border-color: transparent transparent $primary transparent;
+    }
+
+    &--secondary {
+      border-color: transparent transparent $secondary transparent;
+    }
+
+    &--success {
+      border-color: transparent transparent $success transparent;
+    }
+
+    &--warning {
+      border-color: transparent transparent $warning transparent;
+    }
+
+    /* placement */
+    &--top-start {
+      top: 100%;
+      left: 50%;
+      transform: rotate(180deg) translateX(50%);
+    }
+
+    &--top {
+      top: 100%;
+      left: 50%;
+      transform: rotate(180deg) translateX(50%);
+    }
+
+    &--top-end {
+      top: 100%;
+      left: 50%;
+      transform: rotate(180deg) translateX(50%);
+    }
+
+    &--right-start {
+      top: 50%;
+      left: -10px;
+      transform: rotate(-90deg) translateX(50%);
+    }
+
+    &--right {
+      top: 50%;
+      left: -10px;
+      transform: rotate(-90deg) translateX(5px);
+    }
+
+    &--right-end {
+      top: 50%;
+      left: -10px;
+      transform: rotate(-90deg) translateX(50%);
+    }
+
+    &--bottom-start {
+      left: 50%;
+      transform: rotate(-50%);
+    }
+
+    &--bottom {
+      left: 50%;
+      transform: rotate(0deg) translateX(-50%);
+    }
+
+    &--bottom-end {
+      left: 50%;
+      transform: rotate(0deg) translateX(-50%);
+    }
+
+    &--left-start {
+      top: 50%;
+      left: 100%;
+      transform: rotate(90deg) translateX(-50%);
+    }
+
+    &--left {
+      top: 50%;
+      left: 100%;
+      transform: rotate(90deg) translateX(-50%);
+    }
+
+    &--left-end {
+      top: 50%;
+      left: 100%;
+      transform: rotate(90deg) translateX(-50%);
+    }
+  }
+
+  &__trigger {
+    display: inline-flex;
+  }
+}

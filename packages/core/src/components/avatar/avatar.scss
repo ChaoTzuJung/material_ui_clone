@@ -1,0 +1,40 @@
+@import "../../assets/styles/variables";
+
+.chips-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+  font-size: 0.88rem;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: transparent;
+    object-fit: cover;
+  }
+
+  &__color--default {
+    color: $white;
+    background-color: $lightblue;
+  }
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--rounded {
+    border-radius: 4px;
+  }
+
+  &--square {
+    border-radius: 0;
+  }
+
+  &--pointer {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["ESNext", "DOM", "ES5", "ES6", "ES2016", "ES2017"],
+    "allowJs": true,
+    "checkJs": true,
+    "jsx": "preserve",
+    // "declaration": true,                         /* Generates corresponding '.d.ts' file. */
+    // "outFile": "./",                             /* Concatenate and emit output to single file. */
+    // "outDir": "./",                              /* Redirect output structure to the directory. */
+    "noEmit": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,                        /* Parse in strict mode and emit "use strict" for each source file. */
+
+    /* Additional Checks */
+    // "noUnusedLocals": true,                      /* Report errors on unused locals. */
+    // "noUnusedParameters": true,                  /* Report errors on unused parameters. */
+    // "noImplicitReturns": true,                   /* Report error when not all code paths in function return a value. */
+    // "noFallthroughCasesInSwitch": true,          /* Report errors for fallthrough cases in switch statement. */
+    // "noUncheckedIndexedAccess": true,            /* Include 'undefined' in index signature results */
+    // "noPropertyAccessFromIndexSignature": true,  /* Require undeclared properties from index signatures to use element accesses. */
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./"],
+      "@chips/web": ["./packages/web/src"],
+      "@chips/web/*": ["./packages/web/src/*"],
+      "@chips/core": ["./packages/core/src"],
+      "@chips/core/*": ["./packages/core/src/*"],
+    },
+    "esModuleInterop": true,                        /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    
+    /* Advanced Options */
+    "skipLibCheck": true,                           /* Skip type checking of declaration files. */
+    "forceConsistentCasingInFileNames": true,        /* Disallow inconsistently-cased references to the same file. */
+    "resolveJsonModule": true,
+    "diagnostics": true
+  },
+  "include": ["**/src/**/*"],
+  "exclude": ["node_modules", "**/environments/", "**/dist/", "**/core/", "**/cjs/", "**/esm/", "**/umd/", "**/types/"]
+}

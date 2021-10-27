@@ -1,0 +1,237 @@
+@import "../../assets/styles/variables";
+
+.chips-textField {
+  position: relative;
+  padding: 18px 0 0;
+  width: inherit;
+  height: inherit;
+
+  &--standard {
+    @extend .chips-textField;
+
+    background-color: transparent;
+    border-bottom: 2px solid $gray;
+
+    &--error {
+      @extend .chips-textField--standard;
+
+      border-color: $secondary;
+    }
+  }
+
+  &--filled {
+    @extend .chips-textField;
+
+    background-color: $lightgray;
+    border-bottom: 2px solid $gray;
+
+    &--error {
+      @extend .chips-textField--filled;
+
+      border-color: $secondary;
+    }
+  }
+
+  &--outlined {
+    @extend .chips-textField;
+
+    border: 1px solid $blue;
+    border-radius: 5px;
+
+    &--error {
+      @extend .chips-textField--outlined;
+
+      border-color: $secondary;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    display: block;
+    font-size: 1rem;
+    color: $gray;
+    transition: 0.2s;
+
+    &--disabled {
+      @extend .chips-textField__label;
+
+      opacity: 0.4;
+    }
+  }
+
+  &__helper {
+    padding-left: 7px;
+    margin: 0;
+    font-size: smaller;
+    text-align: left;
+    color: $secondary;
+  }
+
+  &__input {
+    padding: 7px;
+    font-size: 1.3rem;
+    color: $gray;
+    background-color: transparent;
+    border: none;
+    outline: 0;
+
+    &:placeholder-shown ~ .chips-textField__label {
+      top: 50%;
+      font-size: 1.3rem;
+      cursor: text;
+      transform: translate(0, -50%);
+
+      &--disabled {
+        cursor: no-drop;
+      }
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus {
+      padding-bottom: 6px;
+      font-weight: 700;
+      background-color: transparent;
+      border-width: 3px;
+      border-color: $blue;
+
+      ~ .chips-textField__label {
+        top: 8px;
+        display: block;
+        font-size: 0.5rem;
+        font-weight: 700;
+        color: $blue;
+        transition: 0.2s;
+      }
+
+      ~ .chips-textField__adornment--start {
+        top: 70%;
+      }
+    }
+
+    &--standard {
+      @extend .chips-textField__input;
+
+      /* reset__input */
+      &:required,
+      &:invalid {
+        box-shadow: none;
+      }
+
+      &--disabled {
+        @extend .chips-textField__input--standard;
+
+        cursor: no-drop;
+      }
+    }
+
+    &--filled {
+      @extend .chips-textField__input;
+
+      /* reset__input */
+      &:required,
+      &:invalid {
+        box-shadow: none;
+      }
+
+      &--disabled {
+        @extend .chips-textField__input--filled;
+
+        cursor: no-drop;
+      }
+    }
+
+    &--outlined {
+      @extend .chips-textField__input;
+
+      /* reset__input */
+      &:required,
+      &:invalid {
+        box-shadow: none;
+      }
+
+      &--disabled {
+        @extend .chips-textField__input--outlined;
+
+        cursor: no-drop;
+      }
+    }
+  }
+
+  &__adornment {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: 0.2s;
+    transform: translate(0, -50%);
+
+    &--start {
+      @extend .chips-textField__adornment;
+
+      left: 5px;
+    }
+
+    &--end {
+      @extend .chips-textField__adornment;
+
+      right: 5px;
+    }
+  }
+
+  &__textarea {
+    margin-right: 43px;
+
+    &:focus {
+      ~ .chips-textField__adornment--start {
+        top: 50%;
+      }
+    }
+
+    &--standard {
+      @extend .chips-textField__input--standard;
+      @extend .chips-textField__textarea;
+
+      &--disabled {
+        @extend .chips-textField__textarea--standard;
+
+        cursor: no-drop;
+      }
+    }
+
+    &--filled {
+      @extend .chips-textField__input--filled;
+      @extend .chips-textField__textarea;
+
+      &--disabled {
+        @extend .chips-textField__textarea--filled;
+
+        cursor: no-drop;
+      }
+    }
+
+    &--outlined {
+      @extend .chips-textField__input--outlined;
+      @extend .chips-textField__textarea;
+
+      &--disabled {
+        @extend .chips-textField__textarea--outlined;
+
+        cursor: no-drop;
+      }
+    }
+  }
+}

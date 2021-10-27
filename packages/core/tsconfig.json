@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "module": "es2015",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "sourceMap": false,
+    "outDir": "./types",
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "environments", "cjs", "esm", "umd", "types"]
+}

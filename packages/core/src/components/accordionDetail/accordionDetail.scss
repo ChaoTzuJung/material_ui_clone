@@ -1,0 +1,38 @@
+.chips-accordionDetail {
+  display: none;
+  padding: 8px 16px 16px;
+
+  &__expand {
+    display: block;
+  }
+
+  &-enter {
+    display: none;
+    height: 0;
+  }
+
+  &-enter-active {
+    display: block;
+    height: auto;
+  }
+
+  &-enter-done {
+    display: block;
+    height: auto;
+  }
+
+  &-exit {
+    display: block;
+    height: auto;
+  }
+
+  &-exit-active {
+    display: none;
+    height: 0;
+  }
+
+  &-exit-done {
+    display: none;
+    height: 0;
+  }
+}

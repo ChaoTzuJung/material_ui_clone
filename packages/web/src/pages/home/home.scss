@@ -1,0 +1,16 @@
+.home-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+  }
+
+  img {
+    width: 60%;
+  }
+}

@@ -1,0 +1,32 @@
+.chips-dialogActions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  &--end {
+    justify-content: flex-end;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--start {
+    justify-content: flex-start;
+  }
+
+  &--between {
+    justify-content: space-between;
+  }
+
+  &--around {
+    justify-content: space-around;
+  }
+
+  &--evenly {
+    justify-content: space-evenly;
+  }
+}

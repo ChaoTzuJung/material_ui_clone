@@ -1,0 +1,20 @@
+@import "../../assets/styles/zindex";
+
+.chips-shade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $shadeZIndex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  visibility: hidden;
+
+  &--open {
+    visibility: visible;
+  }
+}

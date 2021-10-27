@@ -1,0 +1,41 @@
+.chips-breadcrumbs {
+  display: flex;
+  align-items: center;
+  color: #000;
+
+  &__separator {
+    margin: 0 8px;
+    font-size: 12px;
+    user-select: none;
+  }
+
+  &__collapse {
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__path {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    list-style: none;
+  }
+
+  &__location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // TODO: 未來使用 className
+  & a {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

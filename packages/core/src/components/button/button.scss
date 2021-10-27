@@ -1,0 +1,222 @@
+@import "../../assets/styles/variables";
+
+.chips-button {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: $default;
+  background-color: inherit;
+  border-style: solid;
+  border-color: $default;
+  border-radius: 4px;
+  box-shadow:
+    0 3px 1px -2px rgb(0 0 0 / 20%),
+    0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+
+  &--outlined {
+    &:hover {
+      color: $white;
+      background-color: $default;
+      box-shadow:
+        0 2px 4px -1px rgb(0 0 0 / 20%),
+        0 4px 5px 0 rgb(0 0 0 / 14%),
+        0 1px 10px 0 rgb(0 0 0 / 12%);
+    }
+
+    &:active {
+      box-shadow:
+        inset 2px 3px 1px -2px rgb(0 0 0 / 20%),
+        inset 2px 2px 2px 0 rgb(0 0 0 / 14%),
+        inset 2px 1px 5px 0 rgb(0 0 0 / 12%);
+    }
+
+    &--disabled {
+      @extend .chips-button;
+
+      cursor: no-drop;
+    }
+
+    &--primary {
+      color: $primary;
+      border-color: $primary;
+
+      &:hover {
+        color: $white;
+        background-color: $primary;
+      }
+    }
+
+    &--secondary {
+      color: $secondary;
+      border-color: $secondary;
+
+      &:hover {
+        color: $white;
+        background-color: $secondary;
+      }
+    }
+
+    &--success {
+      color: $success;
+      border-color: $success;
+
+      &:hover {
+        color: $white;
+        background-color: $success;
+      }
+    }
+
+    &--warning {
+      color: $warning;
+      border-color: $warning;
+
+      &:hover {
+        color: $white;
+        background-color: $warning;
+      }
+    }
+  }
+
+  &--text {
+    border: none;
+    box-shadow: none;
+
+    &:hover {
+      color: $white;
+      background-color: $default;
+      box-shadow:
+        0 2px 4px -1px rgb(0 0 0 / 20%),
+        0 4px 5px 0 rgb(0 0 0 / 14%),
+        0 1px 10px 0 rgb(0 0 0 / 12%);
+    }
+
+    &:active {
+      box-shadow:
+        inset 2px 3px 1px -2px rgb(0 0 0 / 20%),
+        inset 2px 2px 2px 0 rgb(0 0 0 / 14%),
+        inset 2px 1px 5px 0 rgb(0 0 0 / 12%);
+    }
+
+    &--disabled {
+      @extend .chips-button;
+
+      border: none;
+      box-shadow: none;
+      cursor: no-drop;
+    }
+
+    &--primary {
+      color: $primary;
+
+      &:hover {
+        color: $white;
+        background-color: $primary;
+      }
+    }
+
+    &--secondary {
+      color: $secondary;
+
+      &:hover {
+        color: $white;
+        background-color: $secondary;
+      }
+    }
+
+    &--success {
+      color: $success;
+
+      &:hover {
+        color: $white;
+        background-color: $success;
+      }
+    }
+
+    &--warning {
+      color: $warning;
+
+      &:hover {
+        color: $white;
+        background-color: $warning;
+      }
+    }
+  }
+
+  &--contained {
+    color: $white;
+    background-color: $default;
+    border: none;
+
+    &:hover {
+      color: $default;
+      background-color: $white;
+      box-shadow:
+        0 2px 4px -1px rgb(0 0 0 / 20%),
+        0 4px 5px 0 rgb(0 0 0 / 14%),
+        0 1px 10px 0 rgb(0 0 0 / 12%);
+    }
+
+    &:active {
+      box-shadow:
+        inset 2px 3px 1px -2px rgb(0 0 0 / 20%),
+        inset 2px 2px 2px 0 rgb(0 0 0 / 14%),
+        inset 2px 1px 5px 0 rgb(0 0 0 / 12%);
+    }
+
+    &--disabled {
+      @extend .chips-button;
+
+      color: $white;
+      background-color: $default;
+      border: none;
+      cursor: no-drop;
+    }
+
+    &--primary {
+      color: $white;
+      background-color: $primary;
+
+      &:hover {
+        color: $primary;
+        background-color: $white;
+      }
+    }
+
+    &--secondary {
+      color: $white;
+      background-color: $secondary;
+
+      &:hover {
+        color: $secondary;
+        background-color: $white;
+      }
+    }
+
+    &--success {
+      color: $white;
+      background-color: $success;
+
+      &:hover {
+        color: $success;
+        background-color: $white;
+      }
+    }
+
+    &--warning {
+      color: $white;
+      background-color: $warning;
+
+      &:hover {
+        color: $warning;
+        background-color: $white;
+      }
+    }
+  }
+}
