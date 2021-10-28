@@ -1,14 +1,11 @@
 {
-  "name": "@chips/core",
+  "name": "@mui/core",
   "version": "0.1.0-alpha.7",
   "description": "ASUS UI core library",
   "contributors": [
-    "Joanne Wu <joanne1_wu@asus.com>",
-    "Jeffrey Lee <jeffrey_lee@asus.com>",
-    "SamSH Wang <samsh_wang@asus.com>",
-    "Singing Lin <linsinging1234@gmail.com>"
+    "Alan Chao<s110319022@stu.ntue.edu.tw>"
   ],
-  "homepage": "https://gitlab.com/asus-icr/chips.git",
+  "homepage": "https://github.com/ChaoTzuJung/material_ui_clone.git",
   "license": "MIT",
   "main": "index.cjs.js",
   "module": "index.esm.js",
@@ -36,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/asus-icr/chips.git"
+    "url": "https://github.com/ChaoTzuJung/material_ui_clone.git"
   },
   "scripts": {
     "rollup:w": "cross-env NODE_ENV=development rollup -c -w",

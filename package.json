@@ -1,5 +1,5 @@
 {
-  "name": "chips",
+  "name": "mui",
   "private": true,
   "workspaces": [
     "packages/*"
