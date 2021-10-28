@@ -71,131 +71,57 @@ open storybook -> http://localhost:6006/
   - [ ] Dark Mode
   - [ ] Use styled-components
 
-## File Structure
+## Application structure
 
 ```
-material_ui_clone
-├─ packages
-│  ├─ core
-│  │  ├─ .storybook
-│  │  │  ├─ main.js
-│  │  │  └─ preview.js
-│  │  ├─ CHANGELOG.md
-│  │  ├─ README.md
-│  │  ├─ babel.config.js
-│  │  ├─ package.json
-│  │  ├─ rollup.config.js
-│  │  ├─ src
-│  │  │  ├─ assets
-│  │  │  ├─ components
-│  │  │  │  ├─ accordion
-│  │  │  │  │  ├─ Accordion.tsx
-│  │  │  │  │  └─ accordion.scss
-│  │  │  │  └─ tooltip
-│  │  │  │     ├─ Tooltip.tsx
-│  │  │  │     └─ tooltip.scss
-│  │  │  ├─ compounds
-│  │  │  │  ├─ appBar
-│  │  │  │  │  ├─ AppBar.tsx
-│  │  │  │  │  └─ appBar.scss
-│  │  │  │  └─ index.ts
-│  │  │  ├─ costom.d.ts
-│  │  │  ├─ customizedHooks
-│  │  │  │  ├─ useLoaded.ts
-│  │  │  │  └─ useOutsideClicker.ts
-│  │  │  ├─ helpers
-│  │  │  │  ├─ OutsideClicker.tsx
-│  │  │  │  └─ index.ts
-│  │  │  ├─ index.ts
-│  │  │  ├─ interface
-│  │  │  │  ├─ common.ts
-│  │  │  │  └─ globalHtml.ts
-│  │  │  └─ stories
-│  │  │     ├─ assets
-│  │  │     ├─ components
-│  │  │     │  ├─ Accordion.stories.tsx
-│  │  │     │  └─ Tooltip.stories.tsx
-│  │  │     └─ demo
-│  │  │        ├─ AppBarDemo.stories.tsx
-│  │  │        └─ CardDemo.stories.tsx
-│  │  └─ tsconfig.json
-│  └─ web
-│     ├─ CHANGELOG.md
-│     ├─ README.md
-│     ├─ babel.config.js
-│     ├─ environments
-│     │  ├─ webpack.base.js
-│     │  ├─ webpack.dev.js
-│     │  └─ webpack.prod.js
-│     ├─ index.html
-│     ├─ package.json
-│     ├─ src
-│     │  ├─ App.tsx
-│     │  ├─ api
-│     │  │  ├─ index.ts
-│     │  │  └─ instance.ts
-│     │  ├─ assets
-│     │  │  ├─ images
-│     │  │  │  ├─ chips_logo.png
-│     │  │  │  ├─ giant.jpeg
-│     │  │  │  ├─ giant_tooth.jpeg
-│     │  │  │  ├─ hange.png
-│     │  │  │  ├─ home_chips.png
-│     │  │  │  ├─ levi.jpeg
-│     │  │  │  └─ new_asus_ico_256x256.png
-│     │  │  └─ styles
-│     │  │     └─ all.scss
-│     │  ├─ common
-│     │  │  ├─ header
-│     │  │  │  ├─ Header.tsx
-│     │  │  │  └─ header.scss
-│     │  │  └─ sidebar
-│     │  │     ├─ Sidebar.tsx
-│     │  │     └─ sidebar.scss
-│     │  ├─ costom.d.ts
-│     │  ├─ docs
-│     │  │  └─ guide-line.md
-│     │  ├─ helpers
-│     │  │  └─ authentication.ts
-│     │  ├─ index.tsx
-│     │  ├─ pages
-│     │  │  ├─ cell
-│     │  │  │  ├─ accordionDemo
-│     │  │  │  │  └─ AccordionDemo.tsx
-│     │  │  │  └─ tooltipDemo
-│     │  │  │     ├─ TooltipDemo.tsx
-│     │  │  │     └─ tooltipDemo.scss
-│     │  │  ├─ compound
-│     │  │  │  ├─ appBarDemo
-│     │  │  │  │  ├─ AppBarDemo.tsx
-│     │  │  │  │  └─ appBarDemo.scss
-│     │  │  │  ├─ index.tsx
-│     │  │  │  ├─ loadingDemo
-│     │  │  │  │  └─ LoadingDemo.tsx
-│     │  │  │  └─ userDropdown
-│     │  │  │     ├─ UserDropdownDemo.tsx
-│     │  │  │     └─ userDropdownDemo.scss
-│     │  │  ├─ dashboard
-│     │  │  │  ├─ Dashboard.tsx
-│     │  │  │  └─ dashboard.scss
-│     │  │  └─ home
-│     │  │     ├─ Home.tsx
-│     │  │     └─ home.scss
-│     │  ├─ redux
-│     │  │  ├─ hooks.ts
-│     │  │  ├─ rootReducer.ts
-│     │  │  ├─ rootSaga.ts
-│     │  │  ├─ sagas
-│     │  │  │  └─ userSaga.ts
-│     │  │  ├─ slice
-│     │  │  │  ├─ counterSlice.ts
-│     │  │  │  └─ userSlice.ts
-│     │  │  └─ store.ts
-│     │  └─ routes
-│     │     ├─ PrivateRoute.tsx
-│     │     └─ index.tsx
-│     └─ tsconfig.json
-├─ tsconfig.json
-└─ yarn.lock
-
+├── .storybook/                
+│  ├── main.js              [Storybook 主要的組態設定檔案]
+│  └── preview.js           [storybook 網頁的項目組態設定]
+src/
+├── assets/
+├── docs/                   [文件、style guides]
+├── common/                 [應用級別的通用元件]
+├── containers(or pages)/
+|   ├── feature1/
+|   |   ├── components/     [功能拆分出的專用元件]
+|   |   └── feature1.tsx    [容器元件]
+├── helpers(or lib)/        [純資料邏輯處理相關、middleware]
+│   ├── middleware.ts
+│   └── utils.ts
+├── Interface/
+├── mocks/                  [fake Api 相關]
+├── redux(os store)/        [其實還沒仔細研究，之後再規劃]
+|   ├── index.ts            [combineReducers]
+|   ├── module1.ts          [reducer, action types, actions creators]
+|   └── module2.ts          [reducer, action types, actions creators]
+├── routes/
+│   └── index.ts
+└── index.tsx
+├── stories/                [storybook component 相關的所有資料]
+│   └── assets              [storybook component 圖片]
 ```
+
+reference：
+- [談大型React app檔案架構](https://medium.com/frochu/large-react-app-file-structure-b8be5b1329df)
+- [如何組織你的 React Redux 的檔案架構](https://medium.com/@as790726/%E5%A6%82%E4%BD%95%E7%B5%84%E7%B9%94%E4%BD%A0%E7%9A%84-react-redux-%E7%9A%84%E6%AA%94%E6%A1%88%E6%9E%B6%E6%A7%8B-e000a1afdd1)
+- [Babel 筆記 (7.7.0 之後)](https://hsuehyungtan.medium.com/babel-%E7%AD%86%E8%A8%98-7-7-0-5274be4eed93)
+
+## 開發環境
+
+- node v14.16.1 (lts/fermium)
+- React 17
+- Webpack 5
+- Babel 7
+- eslint 7
+- husky 4
+- editorconfig
+- storybook version 6.3.0 
+
+---
+
+- 排版工具 Prettier plugin
+  - html
+  - style
+  - ts/tsx/js/jsx
+  - json
+
