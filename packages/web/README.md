@@ -1,4 +1,4 @@
-# `@chips/web`
+# `@mui/web`
 
 ## Getting Started
 #### basic setup
